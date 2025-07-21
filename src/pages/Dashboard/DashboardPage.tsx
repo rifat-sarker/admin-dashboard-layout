@@ -16,7 +16,7 @@ import {
 } from "recharts";
 
 const API_BASE = import.meta.env.VITE_API_BASE_URL; // replace with actual
-const AUTH_TOKEN = "e3f0abbd61e3ec7377ca1b9914579a74d837a90c"; // replace with actual
+const AUTH_TOKEN = "sdfdfdf"; // replace with actual
 
 const DashboardPage = () => {
   const [stats, setStats] = useState({
