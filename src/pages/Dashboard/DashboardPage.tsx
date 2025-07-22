@@ -1,6 +1,5 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import DashboardLayout from "../../components/DashboardLayout";
-import axios from "axios";
 import {
   BarChart,
   Bar,
@@ -15,39 +14,12 @@ import {
   Line,
 } from "recharts";
 
-const API_BASE = import.meta.env.VITE_API_BASE_URL; // replace with actual
-const AUTH_TOKEN = "sdfdfdf"; // replace with actual
-
 const DashboardPage = () => {
   const [stats, setStats] = useState({
     apiClients: 0,
     bulkClients: 0,
     devices: 0,
   });
-
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const headers = { Authorization: `Token ${AUTH_TOKEN}` };
-
-        const [apiRes, bulkRes, deviceRes] = await Promise.all([
-          axios.get(`${API_BASE}/client/apiClient/list/`, { headers }),
-          axios.get(`${API_BASE}/client/bulkClient/list/`, { headers }),
-          axios.get(`${API_BASE}/device/devices/list/`, { headers }),
-        ]);
-
-        setStats({
-          apiClients: apiRes.data.length || 0,
-          bulkClients: bulkRes.data.length || 0,
-          devices: deviceRes.data.length || 0,
-        });
-      } catch (err) {
-        console.error("Failed to fetch dashboard data", err);
-      }
-    };
-
-    fetchData();
-  }, []);
 
   const COLORS = ["#8884d8", "#82ca9d", "#ffc658"];
 
