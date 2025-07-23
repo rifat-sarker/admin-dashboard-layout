@@ -1,69 +1,76 @@
-# React + TypeScript + Vite
+# 🛠️ Admin Panel Dashboard (In Progress)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A fully responsive and modern Admin Panel Dashboard built with **React** and **Redux**, designed to deliver a clean and interactive user experience. This dashboard consumes provided APIs to visualize key metrics and data, while ensuring responsiveness across all devices.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🎯 Inspiration
 
-## Expanding the ESLint configuration
+This project is inspired by a professional-grade admin dashboard UI (reference shared in project brief). While not a replica, it draws layout and structural design ideas from the original to ensure clarity, usability, and consistency.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 🚧 Project Status
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+> **⚠️ Currently in development**
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+- [x] Project setup with React and Redux
+- [ ] API integration
+- [ ] Dashboard layout and component design
+- [ ] Mobile and tablet responsiveness
+- [ ] Testing and performance optimization
+- [ ] Final polish and deployment
+
+---
+
+## 🔑 Key Features (Planned)
+
+- 🔄 **Redux Integration** for efficient state management
+- 📊 **Dynamic data rendering** using provided APIs
+- 📱 **Fully responsive design** (Desktop / Tablet / Mobile)
+- 🧮 Real-time data visualizations (charts, tables, KPIs)
+- 🔐 Authentication (planned)
+- ⚙️ Admin-only route protections (planned)
+
+---
+
+## 🧰 Tech Stack
+
+- **Frontend:** React, Redux Toolkit, React Router DOM
+- **Styling:** Tailwind CSS (or your preferred styling library)
+- **State Management:** Redux Toolkit
+- **API Communication:** Axios / Fetch API
+- **Icons & UI Enhancements:** [React Icons], [ShadCN UI] _(if used)_
+
+---
+
+## 📂 Project Structure (Preview)
+
+```bash
+├── public/
+├── src/
+│   ├── assets/
+│   ├── components/
+│   ├── features/         # Redux slices
+│   ├── pages/
+│   ├── services/         # API calls
+│   ├── App.jsx
+│   └── main.jsx
+├── .gitignore
+├── package.json
+└── README.md
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🚀 Getting Started
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Clone the repo:
+git clone https://github.com/rifat-sarker/admin-dashboard-layout.git
+cd admin-dashboard
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## Install dependencies:
+
+npm install
+
+## Start the development server:
+
+npm run dev
