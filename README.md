@@ -69,8 +69,8 @@ cd admin-dashboard
 
 ## Install dependencies:
 
-npm install
+bun install
 
 ## Start the development server:
 
-npm run dev
+bun run dev
